@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# PyInstaller (distribua o .exe pela aba Releases)
+build/
+dist/
+
+# Arquivos gerados pelo programa
+certificados_gerados/
+Certificados_*.docx
+~$*.docx
+
+# Listas de casais reais: nunca versione dados pessoais.
+# Apenas os exemplos fictícios em exemplos/ entram no repositório.
+*.txt
+!requirements.txt
+!exemplos/*.txt
+
+# Editores e sistema operacional
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -44,10 +44,12 @@ Cada encontro exige um certificado individual por casal. Fazer isso à mão sign
 
 ### Opção 1: executável (Windows)
 
-1. Baixe o `.exe` na aba **Releases**.
-2. Coloque `modelo_certificado.docx` na **mesma pasta** do executável.
-3. Abra o programa, preencha os campos e clique em **Gerar certificados**.
+1. Baixe o arquivo `gerador-certificados-windows.zip` na aba **Releases**.
+2. Extraia o `.zip` em uma pasta. Ele já traz o executável e o `modelo_certificado.docx` juntos.
+3. Abra o `gerador-certificados.exe`, preencha os campos e clique em **Gerar certificados**.
 4. O arquivo é salvo em `certificados_gerados/`, ao lado do executável.
+
+> Como o executável não é assinado digitalmente, o Windows pode exibir um aviso do SmartScreen. Clique em **Mais informações** e depois em **Executar assim mesmo**.
 
 ### Opção 2: código-fonte
 
@@ -91,7 +93,7 @@ gerador-certificados-catequese/
 ├── gerador_certificados.py        # aplicativo (lógica + interface)
 ├── modelo_certificado.docx        # modelo do certificado
 ├── requirements.txt
-├── gerador_certificados.spec   # configuração do PyInstaller
+├── gerador_certificados.spec      # configuração do PyInstaller
 ├── assets/
 │   └── gerador-certificados.ico   # ícone do executável
 ├── exemplos/
@@ -106,7 +108,7 @@ py -m pip install pyinstaller
 py -m PyInstaller gerador_certificados.spec
 ```
 
-O arquivo `gerador-certificados.exe` é criado em `dist/`. Lembre-se de distribuí-lo junto com o `modelo_certificado.docx`.
+O arquivo `gerador-certificados.exe` é criado em `dist/`. Ele precisa do `modelo_certificado.docx` na mesma pasta, por isso a Release distribui os dois juntos em um `.zip`.
 
 ## Tecnologias e destaques técnicos
 
